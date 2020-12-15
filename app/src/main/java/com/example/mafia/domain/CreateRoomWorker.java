@@ -1,4 +1,4 @@
-package com.example.mafia;
+package com.example.mafia.domain;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,9 +10,12 @@ import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
+import com.example.mafia.R;
+
 public class CreateRoomWorker extends Worker {
     public static final String CHANNEL_ID = "15";
     public static final String LOG_TAG = "create_room_worker";
+    public static final int NOTIFICATION_ID = 1;
     public static Context context;
 
     public CreateRoomWorker(@NonNull Context context,
@@ -28,24 +31,18 @@ public class CreateRoomWorker extends Worker {
         String value = data.getString("type");
 
         Log.d(LOG_TAG, "My button was hit from worker");
-        String textTitle = "Notification title";
-        String textContent = "You've been notified :)";
+        String textTitle = "Notification Time";
+        String textContent = "You've been notified :>";
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                //.setSmallIcon(R.drawable.notification_icon)
+                .setSmallIcon(R.drawable.dragon)
                 .setContentTitle(textTitle)
                 .setContentText(textContent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        notificationManager.notify(1, builder.build());
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
 
         // TO DO create a "room" with a unique code
-
-//        if ("get".equals(value)) {
-//            // GET operation
-//        } else if ("post".equals(value)) {
-//            // POST operation
-//        }
 
         return Result.success();
     }

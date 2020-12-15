@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewLoginActivityAppNameString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mafia App"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLoginActivityCreateNewAccountString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login to existing account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityAppNameString" />
+
+
+    <TextView
+        android:id="@+id/textViewLoginActivityEmailString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityCreateNewAccountString">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/editTextLoginActivityEmailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityEmailString" />
+
+    <TextView
+        android:id="@+id/textViewLoginActivityPasswordString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLoginActivityEmailInput">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/editTextLoginActivityPasswordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityPasswordString" />
+
+    <Button
+        android:id="@+id/buttonLoginActivityLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="loginExistingUser"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLoginActivityPasswordInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
