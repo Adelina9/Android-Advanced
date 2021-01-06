@@ -1,7 +1,6 @@
 package com.example.mafia.domain;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -12,9 +11,10 @@ import androidx.work.WorkerParameters;
 
 import com.example.mafia.R;
 
+import timber.log.Timber;
+
 public class CreateRoomWorker extends Worker {
     public static final String CHANNEL_ID = "15";
-    public static final String LOG_TAG = "create_room_worker";
     public static final int NOTIFICATION_ID = 1;
     public static Context context;
 
@@ -30,7 +30,7 @@ public class CreateRoomWorker extends Worker {
         Data data = getInputData();
         String value = data.getString("type");
 
-        Log.d(LOG_TAG, "My button was hit from worker");
+        Timber.d("My button was hit from worker");
         String textTitle = "Notification Time";
         String textContent = "You've been notified :>";
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)

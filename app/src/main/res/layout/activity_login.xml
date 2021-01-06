@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewLoginActivityAppNameString"
+        android:id="@+id/textViewLoginActivityAppUsernameString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mafia App"
@@ -21,8 +21,7 @@
         android:text="Login to existing account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityAppNameString" />
-
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityAppUsernameString" />
 
     <TextView
         android:id="@+id/textViewLoginActivityEmailString"
@@ -31,9 +30,7 @@
         android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityCreateNewAccountString">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityCreateNewAccountString" />
 
     <EditText
         android:id="@+id/editTextLoginActivityEmailInput"
@@ -50,14 +47,13 @@
         android:text="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextLoginActivityEmailInput">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/editTextLoginActivityEmailInput" />
 
     <EditText
         android:id="@+id/editTextLoginActivityPasswordInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityPasswordString" />

@@ -1,7 +1,5 @@
 package com.example.mafia.presentation;
 
-import android.util.Log;
-
 import androidx.annotation.StringRes;
 import androidx.databinding.ObservableArrayList;
 import androidx.lifecycle.LiveData;
@@ -20,9 +18,10 @@ import com.example.mafia.domain.User;
 
 import java.util.List;
 
+import timber.log.Timber;
+
 public class CreateRoomViewModel extends ViewModel {
     private final WorkManager workManager;
-    public static final String LOG_TAG = "create_room_view_model";
 
     @StringRes
     public int numbersOfPlayersRes = R.string.app_name;
@@ -41,7 +40,7 @@ public class CreateRoomViewModel extends ViewModel {
     }
 
     public void onButtonHit() {
-        Log.d(LOG_TAG, "My button was hit from view model");
+        Timber.d("My button was hit from view model");
 
         LiveData<List<User>> liveItems = fetchUsersUseCase.execute();
         liveItems.observeForever(heavyItems -> this.users.addAll(heavyItems));

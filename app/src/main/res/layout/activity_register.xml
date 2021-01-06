@@ -7,7 +7,7 @@
     tools:context=".presentation.RegisterActivity">
 
     <TextView
-        android:id="@+id/textViewRegisterActivityAppNameString"
+        android:id="@+id/textViewRegisterActivityAppUsernameString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mafia App"
@@ -22,13 +22,13 @@
         android:text="Create a new account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityAppNameString" />
+        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityAppUsernameString" />
 
     <TextView
-        android:id="@+id/textViewRegisterActivityNameString"
+        android:id="@+id/textViewRegisterActivityUsernameString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityCreateNewAccountString">
@@ -36,12 +36,12 @@
     </TextView>
 
     <EditText
-        android:id="@+id/editTextRegisterActivityNameInput"
+        android:id="@+id/editTextRegisterActivityUsernameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityNameString" />
+        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityUsernameString" />
 
     <TextView
         android:id="@+id/textViewRegisterActivityEmailString"
@@ -50,7 +50,7 @@
         android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityNameInput">
+        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityUsernameInput">
 
     </TextView>
 
@@ -75,21 +75,42 @@
 
     <EditText
         android:id="@+id/editTextRegisterActivityPasswordInput"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityPasswordString" />
 
+    <TextView
+        android:id="@+id/textViewRegisterActivityPasswordConfirmString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm your password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityPasswordInput">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/editTextRegisterActivityPasswordConfirmInput"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityPasswordConfirmString" />
+
     <Button
         android:id="@+id/buttonRegisterActivityRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="addUserToDatabase"
+        android:onClick="registerNewUser"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityPasswordInput" />
+        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityPasswordConfirmInput" />
 
     <TextView
         android:id="@+id/textViewRegisterActivityAlreadyRegisteredString"
