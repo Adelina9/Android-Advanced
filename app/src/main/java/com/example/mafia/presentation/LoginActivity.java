@@ -69,18 +69,6 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), CreateRoomActivity.class));
             finish();
         }
-
-        Button crashButton = new Button(this);
-        crashButton.setText("Crash!");
-        crashButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                throw new RuntimeException("Test Crash"); // Force a crash
-            }
-        });
-
-        addContentView(crashButton, new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT));
     }
 
     public void loginExistingUser(View view) {

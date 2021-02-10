@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mafia</string>
+    <string name="game_title">Mafia</string>
+    <string name="number_of_players">Numărul jucătorilor:</string>
+    <string name="create_room">Creează cameră</string>
+    <string name="login_to_existing_account">Logare într-un cont existent</string>
+    <string name="email">Email</string>
+    <string name="password">Parolă</string>
+    <string name="create_a_new_account">Creează un cont nou</string>
+    <string name="username">Nume de utilizator</string>
+    <string name="confirm_your_password">Confirmați parola voastră</string>
+    <string name="register">Înregistrare</string>
+    <string name="already_registered_message">Deja înregistrați? Apăsați aici pentru autentificare</string>
+    <string name="login">Autentificare</string>
+</resources>
