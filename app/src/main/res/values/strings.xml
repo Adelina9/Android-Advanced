@@ -3,4 +3,13 @@
     <string name="game_title">Mafia</string>
     <string name="number_of_players">Number of players:</string>
     <string name="create_room">Create room</string>
+    <string name="login_to_existing_account">Login to existing account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="username">Username</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="register">Register</string>
+    <string name="already_registered_message">Already registered? Click here to login</string>
 </resources>

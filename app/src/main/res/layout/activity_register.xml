@@ -7,10 +7,10 @@
     tools:context=".presentation.RegisterActivity">
 
     <TextView
-        android:id="@+id/textViewRegisterActivityAppUsernameString"
+        android:id="@+id/textViewRegisterActivityAppNameString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mafia App"
+        android:text="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,21 +19,19 @@
         android:id="@+id/textViewRegisterActivityCreateNewAccountString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create a new account"
+        android:text="@string/create_a_new_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityAppUsernameString" />
+        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityAppNameString" />
 
     <TextView
         android:id="@+id/textViewRegisterActivityUsernameString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Username"
+        android:text="@string/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityCreateNewAccountString">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityCreateNewAccountString" />
 
     <EditText
         android:id="@+id/editTextRegisterActivityUsernameInput"
@@ -47,12 +45,10 @@
         android:id="@+id/textViewRegisterActivityEmailString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityUsernameInput">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityUsernameInput" />
 
     <EditText
         android:id="@+id/editTextRegisterActivityEmailInput"
@@ -66,18 +62,16 @@
         android:id="@+id/textViewRegisterActivityPasswordString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityEmailInput">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityEmailInput" />
 
     <EditText
         android:id="@+id/editTextRegisterActivityPasswordInput"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityPasswordString" />
@@ -86,18 +80,16 @@
         android:id="@+id/textViewRegisterActivityPasswordConfirmString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirm your password"
+        android:text="@string/confirm_your_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityPasswordInput">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityPasswordInput" />
 
     <EditText
         android:id="@+id/editTextRegisterActivityPasswordConfirmInput"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewRegisterActivityPasswordConfirmString" />
@@ -107,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="registerNewUser"
-        android:text="Register"
+        android:text="@string/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextRegisterActivityPasswordConfirmInput" />
@@ -116,10 +108,9 @@
         android:id="@+id/textViewRegisterActivityAlreadyRegisteredString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Already registered? Click here to login"
+        android:text="@string/already_registered_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonRegisterActivityRegister">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/buttonRegisterActivityRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

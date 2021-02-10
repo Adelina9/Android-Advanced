@@ -6,31 +6,31 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewLoginActivityAppUsernameString"
+        android:id="@+id/textViewLoginActivityAppNameString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mafia App"
+        android:text="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLoginActivityCreateNewAccountString"
+        android:id="@+id/textViewLoginActivityLoginExistingAccountString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login to existing account"
+        android:text="@string/login_to_existing_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityAppUsernameString" />
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityAppNameString" />
 
     <TextView
         android:id="@+id/textViewLoginActivityEmailString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityCreateNewAccountString" />
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginActivityLoginExistingAccountString" />
 
     <EditText
         android:id="@+id/editTextLoginActivityEmailInput"
@@ -44,7 +44,7 @@
         android:id="@+id/textViewLoginActivityPasswordString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextLoginActivityEmailInput" />
@@ -63,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="loginExistingUser"
-        android:text="Login"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextLoginActivityPasswordInput" />
